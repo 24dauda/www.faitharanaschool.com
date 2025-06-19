@@ -1,0 +1,594 @@
+html{
+    scroll-behavior: smooth;
+}
+
+button,
+body{
+    font-family:"poppins", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p{
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.fullcontainer{
+    width: 100%;
+}
+
+.container{
+    width: 1140px;
+    margin: auto;
+}
+
+.sectionTitle{
+    width: 300px;
+    border-bottom: 3px solid blue;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 200;
+    margin: 0 auto 50px;
+    position: relative;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+
+.sectionTitle::after{
+    display: inline-block;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background-color:blue;
+    position: absolute;
+    left: calc(50% - 10px);
+    top: calc(75% - 7px);
+    transform: rotate(45deg) translate(50%, 50%);
+    border: 3px solid #fff;
+}
+section{
+    padding: 100px 0;
+    position: relative;
+}
+
+header{
+    width: 100%;
+    background-color:rgb(3, 40, 50);
+    position: fixed;
+    z-index: 2;
+}
+.badge{
+    width:60px;
+    height: 50px;
+    margin-left: -20px;
+    margin-bottom: -50px;
+}
+.faith{
+    font-size: 25px;
+    margin-left: 60px;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+header .container.logo{
+    padding: 15px 0;
+    height: 75px;
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+}
+
+header nav ul li a{
+    display: inline-block;
+    height: 75px;
+    line-height: 75px;
+    padding: 0 15px;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 16px;
+    color: #fff;
+    transition: 0.3s;
+}
+header nav ul li a:hover{
+    background-color: rgb(20, 168, 218);
+}
+span{
+    font-weight: 200;
+    color: #fff;
+    font-size: 25px;
+}
+.banner{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("../image/banner.jpg");
+    background-attachment: fixed;
+}
+.banner h1{
+    color: #fff;
+    margin-top:20px;
+    text-shadow: #fff;
+    
+}
+
+.banner h2{
+    margin-top: 230px;
+    display: inline-block;
+    font-size: 3.5rem;
+    color:aqua;
+    text-shadow: 0 0 10px #330ed7;
+    width: 505;
+    line-height: 4.2rem;
+    font-weight: 100;
+
+}
+ 
+.banner p{
+    color: #000;
+    width: 50%;
+    text-shadow: 0 0 15px blue;
+}
+#aboutsection .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+    position: relative;
+    height: 245px;
+}
+
+#aboutsection .cards > div {
+    width: 350px;
+    background-color: rgb(20, 168, 218);
+    padding: 35px;
+    color: #444;
+    text-align: center;
+    border-radius: 15px;
+    height: 215px;
+    border: 1px solid #000;
+    transition: 0.4s;
+}
+
+#aboutsection .cards > div:hover {
+    width: 400px;
+    margin-top: -20px;
+    border-color: blue;
+    padding: 55px;
+    height: auto;
+}
+
+#aboutsection .cards > div .title {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#aboutsection .cards > div p{
+    color: #fff;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+#aboutsection .cards > div button {
+    border: 1px solid;
+    outline: none;
+    padding: 7px 15px;
+    margin-top: 15px;
+    font-size: 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#aboutsection .cards > div:hover button{
+    background-color: blue;
+    color: #fff;
+}
+
+.course {
+    background-color: rgb(20, 168, 218);
+}
+
+.course .boxcontainer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 50px;
+}
+
+.course .boxcontainer .box{
+    background-color: #fff;
+    text-align: center;
+    padding-bottom: 25px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px 0 #c5c5c5;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.course .boxcontainer .box .cardImage {
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+}
+
+.course .boxcontainer .box .cardImage:after {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    filter: grayscale(100%);
+    transition: 0.4s;
+}
+
+.course .boxcontainer .box:nth-child(1) .cardImage,
+.course .boxcontainer .box:nth-child(1) .cardImage:after{
+    background-image: url("../image/mom.jpg");
+}
+
+.course .boxcontainer .box:nth-child(2) .cardImage,
+.course .boxcontainer .box:nth-child(2) .cardImage:after{
+    background-image: url("../image/yayah\ pic.jpg");
+}
+
+.course .boxcontainer .box:nth-child(3) .cardImage,
+.course .boxcontainer .box:nth-child(3) .cardImage:after{
+    background-image: url("../image/mos.jpg");
+}
+
+.course .boxcontainer .box:nth-child(4) .cardImage,
+.course .boxcontainer .box:nth-child(4) .cardImage:after{
+    background-image: url("../image/vidal.jpg");
+}
+ 
+.course .boxcontainer .box:hover .cardImage:after {
+    top:100%;
+}
+
+.course .boxcontainer .box .courseTitle{
+    font-size: 16px;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #444;
+}
+
+.course .boxcontainer .box .donatiocount {
+    font-size: 13px;
+    font-weight: 600;
+    color: #444;
+    margin-top: 10px;
+}
+
+.course .boxcontainer .box .donatiocount span {
+    color: orangered;
+}
+
+.course .boxcontainer .box button {
+    position: absolute;
+    left: 50%;
+    background-color: blue;
+    color: #fff;
+    transform: translate(-50%);
+    bottom:-15px;
+    border-radius: 60px;
+    bottom: -15px;
+    border-radius: 60px;
+    padding: 7px 15px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.tutorial{
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.tutorial .videoPlayer {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.gallary .gallarycontainer{
+    column-count: 4;
+    column-gap: 30px;
+}
+
+.gallary .gallarycontainer .item {
+    position: relative;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.gallary .gallarycontainer img {
+    width: 190%;
+    display: block;
+    transition: 0.4s;
+}
+
+.gallary .gallarycontainer .title {
+    position: absolute;
+    background-color:orangered ;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    opacity: 0;
+    z-index: 1;
+    transition: 0.4s;
+}
+
+.gallary .gallarycontainer .item:hover .title {
+    opacity: 1;
+}
+
+.gallary .gallarycontainer .item:hover img {
+    transform: scale(1.2);
+}
+
+.join {
+    background-color: rgb(20, 168, 218);
+    color: #000;
+}
+.join .joinTitle {
+    font-size: 48px;
+    font-weight: 100;
+}
+.join .joinTitle span {
+   font-weight: 800;
+   color: blue;
+}
+
+.join button {
+    padding: 7px 15px;
+    margin-top: 20px;
+    border: 0;
+    outline: none;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.join button.joinnow {
+    margin-right: 10px;
+    background-color: #000;
+    color: #fff;
+}
+
+.adoptBtn{
+    color: #fff;
+}
+
+.join button.adoptBtn{
+    background-color: blue;
+}
+
+footer{
+    background-color: #000;
+    color: #fff;
+    padding: 50px 0;
+    font-size: 14;
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-gap: 50px;
+}
+
+footer .title{
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom: 2px solid;
+    margin-bottom: 30px;
+    padding: 0 0 5px 0;
+}
+ footer p {
+    margin-bottom: 10px;
+ }
+
+ footer .linkscontainer Ul {
+    list-style-type: none;
+ }
+
+ footer .linkscontainer ul li a{
+    text-decoration: none;
+    color: #7f7f7f;
+    margin-bottom: 10px;
+    display: inline-block;
+ }
+  .footer .newsLettercontainer {
+    height: 60px;
+    margin-bottom: 11px;
+  }
+
+  footer .newsLettercontainer input {
+    background-color: transparent;
+    border: 1px solid #7f7f7f;
+    outline: none;
+    padding: 10px 15px;
+    width: 100%;
+    margin-top: 10px;
+    color: #ccc;
+    border-radius: 30px;
+  }
+    
+  
+
+  @media screen and ( max-width: 1140px) {
+    .container{
+        width: 100%;
+        padding: 0 15px;
+    }
+    .course .videoPlayer{
+        width: 1280px;
+    }
+  }
+
+  @media screen and (max-width: 1080px) {
+    .banner h1{
+        margin-top: 30px;
+
+    }
+    #aboutsection .cards {
+        justify-content: space-around;
+        height: auto;
+
+    }
+    
+    #aboutsection .card > div {
+        margin: 10px 0;
+    }
+  }
+
+  @media screen and (max-width:1024px) {
+    .banner h1{
+        margin-top: 30px;
+
+    }
+    
+    .banner{
+        background-position: 45%;
+    }
+    .banner h1{
+        font-size: 2.5rem;
+    }
+
+    .course .boxcontainer{
+        grid-template-columns: repeat(2,1fr);
+    
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    header nav {
+        position: relative;
+        border: 2px solid #000;
+        height: 30px;
+        width: 30px;
+        margin-top: 20px;
+        border-radius: 4px;
+    }
+    header nav:after{
+           top: 17px;
+    }
+
+    header nav:before{
+           top: 7px; 
+    }
+
+    header nav:after,
+    header nav::before {
+        content: "";
+        height: 2px;
+        width: 17px;
+        background-color: #000;
+        display: #fff;
+        position: absolute;
+        left: 5px;
+    }
+
+    header nav ul {
+        position: absolute;
+        right: -400px;
+        top: 53px;
+        transition: 0.5s;
+    }
+
+    header nav:hover ul {
+        right: 0;
+    }
+
+    header nav ul li {
+        display: block;
+    }
+
+    header nav ul li a {
+        width: 300px;
+        background-color:rgba(0,0,0,0.6);
+    }
+
+    .banner {
+        background-position-x: 65%;
+    }
+
+    .banner p {
+        font-size: 14px;
+    }
+
+    #aboutsection .card > div:hover{
+        width: 350px;
+    }
+
+    .gallary .gallarycontainer {
+        column-count: 2;
+    }
+  }
+
+  @media screen  and (max-width: 425px){
+    .banner h1{
+        margin-top: 150;
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+     
+    .banner button{
+        margin-bottom: 10px;
+    }
+
+    #aboutsection p {
+        text-align: justify;
+    }
+
+    #aboutsection .cards > div:hover {
+        width: 400px;
+        margin-top: 10px;
+        padding: 35px;
+    }
+    
+    .course .boxcontainer{
+       grid-template-columns: 1fr; 
+    }
+
+    .gallary .gallarycontainer {
+        column-count: 1;
+    }
+    footer .container{
+        grid-template-columns:1fr;
+    }
+    
+  }
+
+  @media screen and (max-width: 320px) {
+    .tutorial .tutorialcontainer h3 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .banner {
+        width: 400px;
+    }
+    .banner h1 {
+            margin-top: 20px;
+    }
+  }
